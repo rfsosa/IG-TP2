@@ -1,0 +1,22 @@
+/* Estilo mínimo y sobrio para lectura local. Se monta sobre Bootstrap 5.3.3. */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #222;
+  background: #fff;
+}
+h1, h2, h3, h4, h5, .menu, header p.h5 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.25;
+}
+h2 { margin-top: 2.25rem; margin-bottom: 1rem; font-size: 1.6rem; }
+h3 { margin-top: 1.5rem; }
+.texto { max-width: 46rem; }
+.menu a { color: #222; }
+.menu a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+.menu ul li { line-height: 1.5; }
+.nota { border-left: 3px solid #999; padding-left: .9rem; color: #444; }
+ol li, ul li { margin-bottom: .6rem; }
+blockquote.blockquote { border-left: 4px solid #999; padding-left: 1rem; font-style: italic; }
+a:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }
