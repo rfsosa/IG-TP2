@@ -91,38 +91,66 @@
 
       <section aria-labelledby="episodios">
         <h2 id="episodios">Los episodios del itinerario</h2>
-        <p>Ana Longoni y Mariano Mestman llaman “Itinerario del 68” a la serie de acciones que, según su lectura, fueron llevando a varios artistas experimentales de una posición alternativa a una de oposición cultural y política. Albarracín los cuenta en este orden, que no coincide necesariamente con una secuencia estricta de fechas:</p>
-        <ol>
-          <li>
+        <p>Ana Longoni y Mariano Mestman llaman “Itinerario del 68” a la serie de acciones que, según su lectura, fueron llevando a varios artistas experimentales de una posición alternativa a una de oposición cultural y política. Albarracín los cuenta en este orden, que no coincide necesariamente con una secuencia estricta de fechas. Con JavaScript activado, se los puede recorrer uno por uno con los botones.</p>
+        <div id="linea-tiempo">
+        <!-- Los botones empiezan ocultos: el JavaScript los muestra. Sin JS no hacen falta. -->
+        <!-- El eje arranca oculto: el JavaScript lo muestra. Cada botón es un marcador numerado con su rótulo. -->
+        <div id="botones-episodios" class="eje" hidden>
+          <div class="eje-pista">
+            <div class="eje-progreso"></div>
+            <button type="button" class="boton-episodio"><span class="marcador">1</span><span class="rotulo">1965</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">2</span><span class="rotulo">Ver y Estimar</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">3</span><span class="rotulo">Experiencias 68</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">4</span><span class="rotulo">Asalto de Rosario</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">5</span><span class="rotulo">Premio Braque</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">6</span><span class="rotulo">Ciclo experimental</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">7</span><span class="rotulo">Encuentro</span></button>
+            <button type="button" class="boton-episodio"><span class="marcador">8</span><span class="rotulo">Noviembre de 1968</span></button>
+          </div>
+        </div>
+
+        <ol class="episodios">
+          <li class="episodio" data-numero="01">
             <strong><cite>Civilización occidental y cristiana</cite> (1965).</strong>
             Para la convocatoria a un premio del Instituto Di Tella, León Ferrari presentó una obra que montaba un avión como los que Estados Unidos usaba para bombardear Vietnam y, sobre él, un Cristo crucificado de utilería. La completaban tres cajas: una representaba una escuela vietnamita bombardeada, otra tenía un crucifijo con un esqueleto en lugar de Cristo y la tercera reunía recortes de diarios y fotografías de la guerra. Aunque la obra estaba montada el día de la inauguración, el director del instituto, Jorge Romero Brest, exigió que se retirara la pieza porque hería la sensibilidad de comunidades religiosas. Albarracín lo señala como el primer acto de censura que vivieron estos artistas.
           </li>
-          <li>
+          <li class="episodio" data-numero="02">
             <strong>Premio Ver y Estimar (1968).</strong>
             En la inauguración, en el Museo de Arte Moderno de Buenos Aires, Eduardo Ruano interrumpió la ceremonia al grito de “¡Fuera yanquis de Vietnam!”, seguido por Roberto Jacoby, Pablo Suárez y el rosarino Juan Pablo Renzi. Ruano se dirigió a su propia obra, una vitrina iluminada con la imagen del presidente Kennedy y un texto sobre su muerte, junto a la cual había apoyado un ladrillo de plomo señalado con flechas, y lo arrojó contra el vidrio. Las autoridades pidieron la intervención de la policía y el público no sabía si la obra era la vitrina, el acto o un atentado. Para Albarracín, la obra fue la acción misma de romper el vidrio: se pasó de la “obra objeto” a la “obra acción”. A Ruano se le prohibió la entrada a los museos y galerías de la capital.
           </li>
-          <li>
+          <li class="episodio" data-numero="03">
             <strong>Experiencias 1968, en el Di Tella.</strong>
             Entre los invitados estaban Oscar Bony, David Lamelas, Margarita Paksa, Jorge Carballa, Roberto Jacoby, Roberto Plate y Pablo Suárez. Suárez escribió una carta a Romero Brest, repartida en la puerta del instituto y en los kioscos de la calle Florida, en la que renunciaba a participar: decía sentir “imposibilidad moral” de hacerlo y sentirse utilizado por la institución. Ruano repartió panfletos sobre la censura de los museos y Jacoby escribió en un gran papel: “Se acabó la contemplación estética porque la estética se disuelve en la vida social” (Longoni y Mestman, 2008: 105, citado por Albarracín). Oscar Bony presentó <cite>La familia obrera</cite>: una familia real (padre, madre e hijo) sobre un pedestal, con una grabación de ruidos de su hogar y un cartel que indicaba que el padre, matricero de profesión, cobraba el doble de lo que ganaba en su oficio por permanecer allí durante la muestra.
             La obra que más atención recibió fue <cite>El baño</cite>, de Roberto Plate: un cubículo con dos puertas, una para mujeres y otra para varones, sin sanitarios pero con paredes blancas donde el público escribió groserías, mensajes de amor y consignas contra el régimen de Onganía. Tras una denuncia, las autoridades se presentaron con una orden policial del juez López Lecube para clausurar la muestra; el director del instituto, Enrique Oteiza, logró que no se cerrara por completo y solo la obra de Plate quedó con un policía vigilándola. En solidaridad, los artistas sacaron sus obras a la calle Florida y las destruyeron; la policía intervino y arrestó a varios. Los abogados de la CGTA los liberaron, y allí comenzó la relación de los artistas con esa central.
           </li>
-          <li>
+          <li class="episodio" data-numero="04">
             <strong>El “asalto” de Rosario.</strong>
             Cuando Romero Brest iba a dar una conferencia en la sala de Amigos del Arte, la vanguardia rosarina hizo un “acto relámpago” contra la censura y el colonialismo cultural. Durante unos veinte minutos los artistas irrumpieron, criticaron al sistema del arte, repartieron volantes, tiraron huevos y bombas de olor y cortaron la luz. El texto con el que terminaron decía, entre otras cosas, que el arte significa “un compromiso activo con la realidad porque aspira a transformar esta sociedad de clases en una mejor” (Longoni y Mestman, 2008: 121). Después, los artistas rosarinos resolvieron devolver el dinero que habían recibido del Di Tella para realizar su ciclo de arte experimental. Renzi lo explicó así: “nos negamos a seguir participando de una maquinaria de prestigio que termina por utilizarnos en su provecho” (Longoni y Mestman, 2008: 123).
           </li>
-          <li>
+          <li class="episodio" data-numero="05">
             <strong>Premio Braque.</strong>
             El premio lo organizaba la embajada de Francia, y la convocatoria incluía una hoja adicional que pedía a los artistas describir sus obras, “señalando la existencia de fotos, leyendas o escritos que la integren”, y reservaba a la organización el derecho de hacer los cambios que juzgara necesarios. Los artistas lo entendieron como un intento de censura. Margarita Paksa envió una carta rechazando la invitación y afirmando el derecho del artista sobre su obra; Roberto Plate y los rosarinos también renunciaron con cartas de tono político, en las que además repudiaban la represión francesa contra estudiantes y obreros del Mayo Francés. En la ceremonia de entrega, en el Museo Nacional de Bellas Artes, hubo un acto relámpago con volantes, huevos y bombas de olor; la policía cerró el acceso al público y detuvo a doce personas. Según Albarracín, fue la primera acción colectiva conjunta entre la vanguardia rosarina y la porteña.
           </li>
-          <li>
+          <li class="episodio" data-numero="06">
             <strong>Ciclo de arte experimental, en Rosario.</strong>
             En un local alquilado se presentaron obras que pasaban de la ambientación a la acción y trabajaban con el público como material. La más destacada fue <cite>El encierro</cite>, de Graciela Carnevale: encerraba al público en un local que hacía de galería, con una vidriera que podía romperse en caso de necesidad. La artista buscaba que los espectadores reaccionaran ante una imposición y usaran la violencia para liberarse; no imaginaba que la vidriera sería rota desde afuera para facilitar el rescate. La policía censuró la obra al relacionarla con el aniversario de la muerte del Che Guevara.
           </li>
-          <li>
+          <li class="episodio" data-numero="07">
             <strong>Encuentro nacional de arte de vanguardia.</strong>
             La ruptura con las instituciones generó la necesidad de reunirse para pensar el camino a seguir. Había posturas distintas: algunos proponían unirse a artistas políticamente comprometidos, como Ricardo Carpani o Carlos Alonso, y otros pensaban que debían consolidarse como vanguardia. Acordaron, pese a las diferencias políticas y estéticas, usar el arte como un lenguaje generador de cambios e irrumpir en la realidad con nuevos materiales y formas de expresión. Propusieron hacer una obra de impacto político y, para dirigirse a un público popular, romper con los códigos de la vanguardia, que solo maneja un público especializado. La idea fue usar los medios masivos, pero no de manera convencional, sino construyendo un circuito de contrainformación que desmintiera la propaganda oficial.
           </li>
+          <li class="episodio" data-numero="08">
+            <strong>Las muestras de noviembre de 1968.</strong>
+            El 3 de noviembre de 1968 se inauguró en el local rosarino de la CGTA la muestra de Tucumán Arde. Unas dos semanas después, según Argentina.gob.ar, se inauguró la segunda muestra en la sede porteña, que duró muy pocas horas. Cómo eran y cómo terminaron se cuenta en <a href="../accion/muestra.html">Las muestras en la CGT</a>.
+          </li>
         </ol>
+
+        <div id="controles-episodios" class="controles-episodios" hidden>
+          <button type="button" id="btn-anterior" class="btn btn-dark btn-sm">← Anterior</button>
+          <span id="contador-episodios" class="small"></span>
+          <button type="button" id="btn-siguiente" class="btn btn-dark btn-sm">Siguiente →</button>
+        </div>
+      </div>
       </section>
 
       <section aria-labelledby="que-cambio">
@@ -156,5 +184,6 @@
       <p class="mb-0">Informática General 2026 · TP2 · Sitio sobre Tucumán Arde. <a href="../creditos.html">Créditos y bibliografía</a></p>
     </div>
   </footer>
+  <script src="../js/linea-tiempo.js" defer></script>
 </body>
 </html>
