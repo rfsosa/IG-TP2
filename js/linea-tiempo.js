@@ -1,5 +1,5 @@
 /* ==========================================================
-   linea-tiempo.js  ·  Línea del tiempo de itinerario-68.html
+   linea-tiempo.js  ·  Línea del tiempo de contexto/index.html
 
    ¿Qué hace?
    Los 8 episodios están escritos en el HTML, uno debajo del otro.
@@ -18,7 +18,7 @@
    Si el JavaScript no carga, el eje queda oculto y la página se
    lee completa, como una lista común.
 
-   Este archivo se carga solo en itinerario-68.html.
+   Este archivo se carga solo en contexto/index.html.
    ========================================================== */
 
 

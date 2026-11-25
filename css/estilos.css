@@ -24,7 +24,7 @@ a:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }
 /* Un elemento con el atributo hidden no se muestra (aunque tenga otro display) */
 [hidden] { display: none !important; }
 
-/* ---------- Línea del tiempo (itinerario-68.html) · estilo constructivista ---------- */
+/* ---------- Línea del tiempo (contexto/index.html) · estilo constructivista ---------- */
 
 /* Paleta usada en este bloque (colores directos):
    negro #111 · crema #f2efe6 · rojo #d62828
