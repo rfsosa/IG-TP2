@@ -22,7 +22,7 @@
    ========================================================== */
 
 
-// 1) BUSCAMOS LOS ELEMENTOS DEL HTML que vamos a necesitar
+// 1) Captura de elementos
 const contenedor = document.getElementById("linea-tiempo");
 const eje = document.getElementById("botones-episodios");
 const lineaRoja = document.querySelector(".eje-progreso");
@@ -34,14 +34,13 @@ const botonAnterior = document.getElementById("btn-anterior");
 const botonSiguiente = document.getElementById("btn-siguiente");
 const textoContador = document.getElementById("contador-episodios");
 
-// 2) UNA VARIABLE para recordar qué episodio se está mostrando.
-//    Empieza en 0, que es el primero (en programación se cuenta desde 0).
+// 2) variable que actua como indice.
 let episodioActual = 0;
 
 
-// 3) LA FUNCIÓN PRINCIPAL: muestra el episodio que le pedimos
+// 3) LA FUNCIÓN PRINCIPAL muestra el episodio que le pedimos
 function mostrarEpisodio(numero) {
-  // Primero, ocultamos todos los episodios y "apagamos" todos los marcadores
+  // Primero, oculta todos los episodios y apagamos todos los marcadores
   for (let i = 0; i < episodios.length; i++) {
     episodios[i].hidden = true;
     botonesEpisodio[i].classList.remove("active");
@@ -53,11 +52,11 @@ function mostrarEpisodio(numero) {
     }
   }
 
-  // Después, mostramos solo el episodio pedido y prendemos su marcador
+  // Después, muestra solo el episodio pedido y prende su marcador
   episodios[numero].hidden = false;
   botonesEpisodio[numero].classList.add("active");
 
-  // Guardamos cuál es el episodio actual
+  // Guardamos el indice del episodio actual
   episodioActual = numero;
 
   // La línea roja del eje avanza hasta el marcador actual.
@@ -91,9 +90,9 @@ function irAlAnterior() {
 }
 
 
-// 4) QUÉ PASA CUANDO ALGUIEN HACE CLIC
+//  UANDO ALGUIEN HACE CLIC
 
-// En cada marcador del eje: mostramos el episodio con su mismo número
+// En cada marcador del eje muestra el episodio con su mismo número
 botonesEpisodio.forEach(function (boton, indice) {
   boton.addEventListener("click", function () {
     mostrarEpisodio(indice);
@@ -104,7 +103,7 @@ botonAnterior.addEventListener("click", irAlAnterior);
 botonSiguiente.addEventListener("click", irAlSiguiente);
 
 
-// 5) TECLADO: flechas izquierda y derecha (cuando el foco está dentro de la línea del tiempo)
+//  TECLADO: flechas izquierda y derecha (cuando el foco está dentro de la línea del tiempo)
 contenedor.addEventListener("keydown", function (evento) {
   if (evento.key === "ArrowRight") {
     irAlSiguiente();
@@ -115,7 +114,7 @@ contenedor.addEventListener("keydown", function (evento) {
 });
 
 
-// 6) CELULAR: deslizar el dedo sobre la ficha del episodio
+//  CELULAR: deslizar el dedo sobre la ficha del episodio
 //    Guardamos dónde empezó el toque y, al terminar, vemos hacia dónde se movió.
 let toqueInicialX = 0;
 
@@ -137,6 +136,6 @@ listaEpisodios.addEventListener("touchend", function (evento) {
 
 // 7) AL CARGAR LA PÁGINA
 contenedor.classList.add("activa");   // el CSS usa esta clase para sacar la numeración de la lista
-eje.hidden = false;                   // mostramos el eje y los controles (venían ocultos)
+eje.hidden = false;                   // muestra el eje y los controles (q venían ocultos)
 panelControles.hidden = false;
-mostrarEpisodio(0);                   // arrancamos por el primer episodio
+mostrarEpisodio(0);                   // arranca por el primer episodio

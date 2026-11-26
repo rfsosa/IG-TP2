@@ -55,10 +55,61 @@
       <section aria-labelledby="como">
         <h2 id="como">Cómo comunicarse</h2>
         <ul>
-          <li>Correo electrónico del equipo: [completar]</li>
-          <li>Repositorio del proyecto: [completar]</li>
+          <li>Correo electrónico del equipo: <a href="mailto:ruarteandres96@gmail.com">[Correo]</a></li>
+          <li>Repositorio del proyecto: <a href="https://github.com/rfsosa/IG-TP2">https://github.com/rfsosa/IG-TP2</a></li>
         </ul>
         <p>Si el mensaje es una corrección, conviene indicar la página y el párrafo, y la fuente en la que se apoya el cambio.</p>
+      </section>
+      <section aria-labelledby="formulario">
+        <h2 id="formulario">Formulario de contacto</h2>
+
+        <div id="mensaje-exito" class="alert alert-success" role="status" hidden>
+          ¡Gracias! Tu mensaje fue enviado correctamente.
+        </div>
+        <div id="mensaje-error" class="alert alert-danger" role="alert" hidden>
+          No pudimos enviar el mensaje. Revisá tu conexión e intentá de nuevo.
+        </div>
+
+        <!-- data-endpoint: dirección del servicio que reenvía el mensaje al correo del equipo
+             (por ejemplo un formulario de Formspree: https://formspree.io/f/xxxxxxxx).
+             Si queda vacío, el envío se simula. -->
+        <form id="form-contacto" class="form-contacto" novalidate data-endpoint="" method="post">
+          <div class="campo">
+            <label for="nombre" class="form-label">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" autocomplete="name">
+            <div id="error-nombre" class="error-campo" aria-live="polite"></div>
+          </div>
+
+          <div class="campo">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" autocomplete="email">
+            <div id="error-email" class="error-campo" aria-live="polite"></div>
+          </div>
+
+          <div class="campo">
+            <label for="asunto" class="form-label">Asunto</label>
+            <select id="asunto" name="asunto" class="form-select">
+              <option value="">Elegí una opción…</option>
+              <option value="consulta">Consulta sobre el sitio</option>
+              <option value="aporte">Aporte de material o fuente</option>
+              <option value="correccion">Corrección de un dato</option>
+              <option value="otro">Otro</option>
+            </select>
+            <div id="error-asunto" class="error-campo" aria-live="polite"></div>
+          </div>
+
+          <div class="campo">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" rows="5"></textarea>
+            <div class="d-flex justify-content-between">
+              <span class="small text-muted">Entre 10 y 500 caracteres.</span>
+              <span id="contador-mensaje" class="contador small">0 / 500</span>
+            </div>
+            <div id="error-mensaje" class="error-campo" aria-live="polite"></div>
+          </div>
+
+          <button type="submit" class="btn btn-dark">Enviar</button>
+        </form>
       </section>
     </div>
   </main>
@@ -68,5 +119,7 @@
       <p class="mb-0">Informática General 2026 · TP2 · Sitio sobre Tucumán Arde. <a href="creditos.html">Créditos y bibliografía</a></p>
     </div>
   </footer>
+
+  <script src="js/formulario.js" defer></script>
 </body>
 </html>
