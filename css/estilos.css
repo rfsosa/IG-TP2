@@ -223,3 +223,17 @@ a:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }
 .form-contacto .error-campo { color: #b02a37; font-size: .9rem; min-height: 1.2rem; }
 .form-contacto .contador { color: #555; }
 .form-contacto .contador.excedido { color: #b02a37; }
+
+/* ---------- Galería (archivo/index.html) ---------- */
+.item-galeria img {
+  width: 100%;
+  aspect-ratio: 4 / 3;          /* todas las miniaturas con la misma proporción */
+  object-fit: cover;            /* recorta en vez de deformar */
+  background: #ddd;
+  border: 2px solid #111;
+  display: block;
+}
+.item-galeria a:hover img { border-color: #d62828; }
+.item-galeria a:focus-visible img { outline: 3px solid #d62828; outline-offset: 2px; }
+.item-galeria figcaption { line-height: 1.3; }
+
